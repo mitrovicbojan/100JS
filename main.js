@@ -2,8 +2,6 @@
 /*
 Beginner Challenges (1-25)
 
-10. Write a function to check if a string is a palindrome.
-11. Find the length of a given string.
 12. Replace all occurrences of a given word in a string.
 13. Concatenate two arrays.
 14. Find the largest number in an array.
@@ -74,3 +72,31 @@ const strNum = Number(convertStr);
 console.log(strNum);
 
 // #9 Reverse a string without using .reverse().
+
+const revStr = "Hello";
+let reversedStr = "";
+
+for (let i = revStr.length - 1; i >= 0; i--) {
+  reversedStr += revStr[i];
+}
+
+console.log(reversedStr);
+
+// #10 Write a function to check if a string is a palindrome.
+
+function checkPalindrome(word) {
+  const reversedWord = word.split("").reverse().join("");
+
+  reversedWord === word
+    ? console.log(`${word} is a palidndrome`)
+    : console.log(`${word} is not a palidndrome`);
+}
+checkPalindrome("radar");
+
+// #11 Find the length of a given string.
+
+function findLen(str) {
+  return console.log(`Length of ${str} is ${str.length}`);
+}
+
+findLen("hello");
