@@ -3,9 +3,7 @@
 
 Intermediate Challenges (26-60)
 
-Find the sum of digits in a number.
-Count the number of vowels in a string.
-Capitalize the first letter of every word in a string.
+
 Convert a string to title case.
 Check if two strings are anagrams.
 Find the second largest number in an array.
@@ -79,3 +77,36 @@ function fibonacciNum(num) {
 console.log(fibonacciNum(12));
 
 // #4 Find the sum of digits in a number.
+
+function sumDigits(num) {
+  const myNums = num.toString().split("");
+
+  let digitSum = 0;
+
+  for (let i = 0; i < myNums.length; i++) {
+    digitSum = digitSum + Number(myNums[i]);
+  }
+
+  return console.log(`Sum of digits in number ${num} is ${digitSum}`);
+}
+
+sumDigits(15);
+
+// #5 Count the number of vowels in a string.
+
+function countVowels(str) {
+  const vowels = ["a", "e", "i", "o", "u"];
+  let count = 0;
+
+  for (let i = 0; i < str.length; i++) {
+    if (vowels.includes(str[i].toLowerCase())) {
+      count++;
+    }
+  }
+
+  console.log(count);
+}
+
+countVowels("hello wOrld");
+
+// #6 Capitalize the first letter of every word in a string.
