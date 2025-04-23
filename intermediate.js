@@ -110,3 +110,16 @@ function countVowels(str) {
 countVowels("hello wOrld");
 
 // #6 Capitalize the first letter of every word in a string.
+
+const capStr = function (str) {
+  let myNewArr = str.toLowerCase().split(" ");
+
+  let newarr = [];
+
+  myNewArr.forEach((word) => {
+    newarr.push(word.charAt(0).toUpperCase() + word.slice(1));
+  });
+  return console.log(newarr.join(" "));
+};
+
+capStr("HEllo world");
