@@ -123,3 +123,25 @@ const capStr = function (str) {
 };
 
 capStr("HEllo world");
+
+// 7# Convert a string to title case.
+
+// 8# Check if two strings are anagrams.
+
+function checkAnagrams(str1, str2) {
+  if (str1.length != str2.length) {
+    return console.log("not anagrams");
+  }
+  const arr1 = str1.split("");
+  const arr2 = str2.split("");
+
+  for (let i = 0; i < arr1.length; i++) {
+    if (!arr2.includes(arr1[i])) {
+      return console.log("false");
+    } else {
+      return console.log("true");
+    }
+  }
+}
+
+checkAnagrams("ham", "mah");
