@@ -3,11 +3,6 @@
 
 Intermediate Challenges (26-60)
 
-
-Convert a string to title case.
-Check if two strings are anagrams.
-Find the second largest number in an array.
-Find the second smallest number in an array.
 Count occurrences of a specific element in an array.
 Remove falsy values from an array.
 Flatten a nested array.
@@ -137,11 +132,43 @@ function checkAnagrams(str1, str2) {
 
   for (let i = 0; i < arr1.length; i++) {
     if (!arr2.includes(arr1[i])) {
-      return console.log("false");
+      return console.log("2 strings are not anagrams");
     } else {
-      return console.log("true");
+      return console.log("2 strings are anagrams");
     }
   }
 }
 
 checkAnagrams("ham", "mah");
+
+// 9# Find the second largest number in an array.
+
+const arrNums = [5, 7, 8, 33, 35, 87, 12, 1, 9, 15, 73, 45];
+
+const scndLgNum = arrNums.sort().reverse()[1];
+
+console.log(`The second largest number in an array is ${scndLgNum}`);
+
+// 10# Find the second smallest number in an array.
+
+const scndSmNum = arrNums.sort()[1];
+
+console.log(`The second smallest number in an array is ${scndSmNum}`);
+
+// Using function
+
+function numChecking(arr) {
+  //2nd smallest num
+  const smNum = arr.sort()[1];
+
+  //2nd largest num
+  const lgNum = arr.sort().reverse()[1];
+
+  return console.log(
+    `The second smallest number in array is ${smNum} and the second largest is ${lgNum}`
+  );
+}
+
+numChecking([5, 7, 8, 33, 35, 87, 12, 1, 9, 15, 73, 45]);
+
+// 11# Count occurrences of a specific element in an array.
