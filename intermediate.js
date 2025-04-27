@@ -3,10 +3,6 @@
 
 Intermediate Challenges (26-60)
 
-Count occurrences of a specific element in an array.
-Remove falsy values from an array.
-Flatten a nested array.
-Merge two sorted arrays.
 Find the intersection of two arrays.
 Find the union of two arrays.
 Find the difference between two arrays.
@@ -172,3 +168,56 @@ function numChecking(arr) {
 numChecking([5, 7, 8, 33, 35, 87, 12, 1, 9, 15, 73, 45]);
 
 // 11# Count occurrences of a specific element in an array.
+
+function occurCount(arr, el) {
+  let count = 0;
+  arr.forEach((item) => {
+    item === el ? count++ : count;
+  });
+
+  return console.log(`${el} occures in an array ${count} time(s)`);
+}
+
+occurCount([1, 2, 3, 4, 1, 1], 5);
+occurCount(["to", "step", "done", "javascript", "array", "to"], "to");
+
+// 12# Remove falsy values from an array.
+
+function removeFalsy(arr) {
+  const newArr = arr.filter(Boolean);
+  return console.log(newArr);
+}
+
+removeFalsy([
+  1,
+  1,
+  5,
+  0,
+  true,
+  NaN,
+  -0,
+  "",
+  false,
+  null,
+  undefined,
+  BigInt(0),
+  "end",
+]);
+
+// #13 Flatten a nested array.
+
+const flatArr = (arr) => {
+  return console.log(arr.flat(Infinity));
+};
+
+flatArr([[3, 2, 1], [4, 6, 5, [3, 4, 5, 10]], [], [9, 7, 8]]);
+
+// 14# Merge two sorted arrays.
+
+const mergeArr = (arr1, arr2) => {
+  return console.log(arr1.concat(arr2).sort());
+};
+
+mergeArr([1, 2, 3], [1, 2, 3]);
+
+// 15# Find the intersection of two arrays.
