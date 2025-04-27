@@ -3,8 +3,8 @@
 
 Intermediate Challenges (26-60)
 
-Find the intersection of two arrays.
-Find the union of two arrays.
+
+
 Find the difference between two arrays.
 Implement a basic stack data structure.
 Implement a basic queue data structure.
@@ -221,3 +221,32 @@ const mergeArr = (arr1, arr2) => {
 mergeArr([1, 2, 3], [1, 2, 3]);
 
 // 15# Find the intersection of two arrays.
+
+function findInter(arr1, arr2) {
+  return console.log(arr1.filter((el) => arr2.includes(el)));
+}
+
+findInter([1, 2, 3], [2, 44, 3]);
+
+// 16# Find the union of two arrays.
+
+function findUnion(arr1, arr2) {
+  const newSet = new Set();
+
+  const unionArr = [];
+
+  for (let num of arr1) {
+    newSet.add(num);
+  }
+  for (let num of arr2) {
+    newSet.add(num);
+  }
+
+  for (let num of newSet) {
+    unionArr.push(num);
+  }
+
+  return console.log(unionArr);
+}
+
+findUnion([1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 6], [4, 5, 6, 7, 8, 9, 6, 4, 5]);
